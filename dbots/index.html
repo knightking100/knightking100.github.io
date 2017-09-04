@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+ <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
 <body>
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script type="text/javascript">
@@ -23,7 +26,7 @@
 		}
 		
 		if (id === null) {
-			document.body.innerHTML = "Please provide a Discord bot id"
+			document.body.innerHTML = "Usage: https://knightking100.github.io/dbots?id=BOT_ID&p=PERMISSIONS"
 		}
 		else {
 			window.location.href = "https://discordapp.com/oauth2/authorize?client_id=" + id + "&scope=bot&permissions=" + perms;
