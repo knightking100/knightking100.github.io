@@ -15,15 +15,18 @@
 	}
 	// Give the parameter a variable name
 	var id = getParameterByName('id');
+	var perms = getParameterByName('p');
 
 	 $(document).ready(function() {
-
-		// Check if the URL parameter is apples
+	    if (perms === null){
+		    perms = "0";
+		}
+		
 		if (id === null) {
 			document.body.innerHTML = "Please provide a Discord bot id"
-		} 
+		}
 		else {
-			window.location.href = "https://discordapp.com/oauth2/authorize?client_id=" + id + "&scope=bot&permissions=0";
+			window.location.href = "https://discordapp.com/oauth2/authorize?client_id=" + id + "&scope=bot&permissions=" + perms;
 		}
 	});
 </script>
